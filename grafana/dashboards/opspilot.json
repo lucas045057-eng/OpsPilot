@@ -1,0 +1,22 @@
+{
+  "annotations": {"list": []},
+  "editable": false,
+  "graphTooltip": 1,
+  "panels": [
+    {"type":"stat","title":"CPU Usage","gridPos":{"h":4,"w":6,"x":0,"y":0},"targets":[{"expr":"opspilot_host_cpu_percent","refId":"A"}],"fieldConfig":{"defaults":{"unit":"percent","thresholds":{"mode":"absolute","steps":[{"color":"green"},{"color":"orange","value":70},{"color":"red","value":85}]}}}},
+    {"type":"stat","title":"Memory Usage","gridPos":{"h":4,"w":6,"x":6,"y":0},"targets":[{"expr":"opspilot_host_memory_percent","refId":"A"}],"fieldConfig":{"defaults":{"unit":"percent","thresholds":{"mode":"absolute","steps":[{"color":"green"},{"color":"orange","value":70},{"color":"red","value":85}]}}}},
+    {"type":"stat","title":"Disk Usage","gridPos":{"h":4,"w":6,"x":12,"y":0},"targets":[{"expr":"opspilot_host_disk_percent","refId":"A"}],"fieldConfig":{"defaults":{"unit":"percent","thresholds":{"mode":"absolute","steps":[{"color":"green"},{"color":"orange","value":80},{"color":"red","value":90}]}}}},
+    {"type":"timeseries","title":"Service Availability","gridPos":{"h":8,"w":12,"x":0,"y":4},"targets":[{"expr":"opspilot_service_up","legendFormat":"{{service}}","refId":"A"}],"fieldConfig":{"defaults":{"min":0,"max":1,"custom":{"lineWidth":2,"fillOpacity":18}}}},
+    {"type":"timeseries","title":"Network Traffic","gridPos":{"h":8,"w":12,"x":12,"y":4},"targets":[{"expr":"rate(opspilot_host_network_rx_bytes_total[1m])","legendFormat":"RX bytes/s","refId":"A"},{"expr":"rate(opspilot_host_network_tx_bytes_total[1m])","legendFormat":"TX bytes/s","refId":"B"}]},
+    {"type":"stat","title":"Firing Alerts","gridPos":{"h":4,"w":6,"x":0,"y":12},"targets":[{"expr":"opspilot_alerts_firing","refId":"A"}],"fieldConfig":{"defaults":{"thresholds":{"mode":"absolute","steps":[{"color":"green"},{"color":"red","value":1}]}}}},
+    {"type":"stat","title":"Resolved Incidents","gridPos":{"h":4,"w":6,"x":6,"y":12},"targets":[{"expr":"opspilot_alerts_resolved","refId":"A"}]}
+  ],
+  "schemaVersion": 39,
+  "tags": ["opspilot","sre","devops"],
+  "templating": {"list": []},
+  "time": {"from":"now-30m","to":"now"},
+  "title": "OpsPilot Monitoring Dashboard",
+  "uid": "opspilot-overview",
+  "version": 1
+}
+
