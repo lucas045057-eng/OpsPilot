@@ -1,0 +1,20 @@
+groups:
+  - name: opspilot-service-health
+    rules:
+      - alert: ContainerDown
+        expr: opspilot_service_up == 0
+        for: 10s
+        labels:
+          severity: critical
+          service: '{{ $labels.service }}'
+        annotations:
+          summary: "OpsPilot service is down"
+          description: "{{ $labels.service }} is not running."
+      - alert: HostDiskHigh
+        expr: opspilot_host_disk_percent > 85
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Host disk usage is high"
+
