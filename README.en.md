@@ -85,10 +85,6 @@ pytest -q
 
 GitHub Actions runs the test suite and builds the Docker image. The tests cover healthy service collection, fault injection, P1 alerting, automated restart and recovery, Prometheus metrics, and manual-review mode.
 
-## Interview pitch
-
-> I split AgentOps and OpsPilot into two layers. AgentOps manages the task execution lifecycle, while OpsPilot manages the service runtime lifecycle. OpsPilot collects host and container health with Python/FastAPI, exposes Prometheus metrics for Grafana, stores the incident timeline in SQLite, and uses an allowlisted runbook to restart failed services. I validated the full detection, recovery, and post-incident review loop with fault injection.
-
 ## Resume-ready keywords
 
 `Python` `FastAPI` `Docker` `Docker Compose` `Prometheus` `Grafana` `Alertmanager` `SQLite` `GitHub Actions` `SRE` `observability` `incident management` `automated remediation` `MTTR`

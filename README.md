@@ -100,10 +100,6 @@ GitHub Actions 会执行 pytest，并构建 Docker 镜像。测试覆盖：
 - Prometheus 指标输出；
 - 关闭自动修复后的人工处理状态。
 
-## 面试讲法
-
-> 我把 AgentOps 和 OpsPilot 拆成两个层次：AgentOps 解决任务执行生命周期，OpsPilot 解决服务运行生命周期。OpsPilot 通过 Python/FastAPI 采集主机和容器状态，用 Prometheus/Grafana 做可观测性，用 SQLite 保存事故时间线，再通过白名单 Runbook 自动重启故障服务，并用故障注入验证了检测、恢复和复盘链路。
-
 ## 已实现与后续增强
 
 - 已接入 Prometheus Alertmanager webhook，支持 firing/resolved 事件写入事故时间线；
