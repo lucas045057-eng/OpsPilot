@@ -4,7 +4,7 @@ Docker Service Observability and Automated Self-Healing Platform
 
 English version: [README.en.md](README.en.md) · Resume/project brief: [docs/PROJECT_BRIEF_BILINGUAL.md](docs/PROJECT_BRIEF_BILINGUAL.md)
 
-OpsPilot 是一个可运行的 SRE 运维平台 Demo：它持续检查主机和服务状态，把异常写入事故时间线，按白名单执行安全的自动修复，并通过 Prometheus/Grafana 提供指标和大屏。项目与 AgentOps 形成互补：AgentOps 管理“任务如何执行”，OpsPilot 管理“服务运行后如何被观测、恢复和复盘”。
+OpsPilot 是一个可运行的 SRE 运维平台 Demo：它持续检查主机和服务状态，把异常写入事故时间线，按白名单执行安全的自动修复，并通过 Prometheus/Grafana 提供指标和大屏。
 
 ## 你可以演示什么
 
